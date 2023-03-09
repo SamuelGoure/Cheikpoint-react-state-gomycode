@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./profil/Profile";
 
 function App() {
+  let fullName = "Alasane Ouattara";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <button onClick={"faux"}>Cliquez ici pour voir le profil</button>
+      </div>
+      <Profile
+        fullName={fullName}
+        bio="je suis chargé de gouverner la nation ivoirienne, et cela fait plus d'une dizaine d'année que je suis chargé de diriger le pays. Je suis originaire de Kong, et titulaire d'un doctorat en économie au USA précisement à Washington"
+        profession="President de la république de la Côte d'Ivoire"
+      >
+        <img src="alaasane.jpg" alt="president" />
+      </Profile>
     </div>
   );
 }
